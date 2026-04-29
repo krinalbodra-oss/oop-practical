@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Shape {
+protected:
+    double d1, d2;
+
+public:
+    void getData(double a, double b) {
+        d1 = a;
+        d2 = b;
+    }
+}
+
+class Triangle 
+public Shape {
+public:
+    double area() {
+        return 0.5 * d1 * d2;
+    }
+}
+
+class Rectangle 
+public Shape {
+public:
+    double area() {
+        return d1 * d2;
+    }
+}
+
+int main() {
+    Triangle t;
+    Rectangle r;
+
+    t.getData(10, 5);
+    r.getData(10, 5);
+
+    cout << "Area of Triangle: " << t.area() << endl;
+    cout << "Area of Rectangle: " << r.area() << endl;
+
+    return 0;
+}
